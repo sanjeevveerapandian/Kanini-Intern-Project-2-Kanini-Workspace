@@ -8,7 +8,7 @@ import './Navbar.css';
 const NavbarComponent = () => {
   return (
     <>
-      <Navbar bg="light" variant="black" expand="lg" className="navbar-custom">
+      <Navbar bg="light" variant="black" expand="lg" className="navbar-custom sticky-top">
         <Container>
           <Navbar.Brand as={Link} to="/" className="companyname">
             <img
