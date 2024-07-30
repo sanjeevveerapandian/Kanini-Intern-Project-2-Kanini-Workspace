@@ -1,0 +1,131 @@
+.banner-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.banner-image {
+  width: 100%;
+  height: auto;
+}
+
+.welcome-card {
+  position: absolute;
+  width: 90%;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(255, 255, 255); 
+  padding: 20px;
+  border-radius: 9px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  z-index: 1000; /* Ensure welcome card is on top */
+}
+
+.welcome-card p {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.location-dropdown {
+  width: 30%;
+  padding: 10px;
+  margin-top: 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 1.2em;
+  appearance: none;
+  text-align: left;
+  font-weight: 500;
+  color: #000000;
+  z-index: 1001; /* Ensure dropdown is on top */
+}
+
+.location-dropdown:focus {
+  outline: none;
+}
+
+.upcoming-card, .events-card, .events-card1 {
+  position: relative;
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 60px; /* Add spacing to prevent overlap */
+}
+
+.upcoming-card {
+  margin-bottom: 20px;
+}
+
+.events-card1 {
+  margin-top: 20px;
+}
+
+.tick-image {
+  width: 45px;
+  margin-right: 10px;
+}
+
+.upcoming-card h2 {
+  display: flex;
+  align-items: center;
+}
+
+.upcoming-card p, .events-card p, .events-card1 p {
+  margin: 10px 0;
+}
+
+.upcoming-card a, .events-card a, .events-card1 a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+}
+
+.events-card h3, .events-card1 h3 {
+  margin-top: 0;
+}
+
+/* Updated Styles for Meeting Rooms Section */
+.meeting-rooms-section {
+  margin-top: 20px;
+}
+
+.meeting-rooms-section h2 {
+  margin-bottom: 15px;
+}
+
+.meeting-rooms-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; /* Enable horizontal scrolling */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+.meeting-rooms-cards::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+.meeting-room-card {
+  flex: 0 0 auto; /* Prevent cards from shrinking */
+  width: 200px; /* Set a fixed width for the cards */
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 10px;
+}
+
+.meeting-room-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 9px 9px 0 0;
+}
+
+.meeting-room-card p {
+  margin: 10px 0 0;
+  font-size: 1em;
+  color: #333;
+}

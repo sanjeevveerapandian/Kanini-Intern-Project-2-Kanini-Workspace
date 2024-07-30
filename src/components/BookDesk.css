@@ -1,0 +1,43 @@
+.bookdesk-container {
+  margin-top: 20px;
+}
+
+.light-text {
+  color: #6c757d;
+}
+
+.add-colleagues-text {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.add-colleagues-text i {
+  margin-right: 5px;
+}
+
+.book-desk-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  display: block;
+}
+
+.book-desk-button:hover {
+  background-color: #0056b3;
+}
+
+.bookdesk-container .form-control {
+  margin-bottom: 10px;
+}
+
+.image-card {
+  width: 570px;
+  height: 800px;
+  top: 15px;
+  gap: 0px;
+  border-radius: 12px 0px 0px 0px;
+  opacity: 1; /* Set to 1 to make it visible */
+}
