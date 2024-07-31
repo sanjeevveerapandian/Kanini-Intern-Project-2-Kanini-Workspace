@@ -13,7 +13,7 @@ const Bookroom = () => {
     { name: 'Conference Room 1', employees: 8, img: 'Img (1).png' },
     { name: 'Conference Room 2', employees: 16, img: 'Img.png'},
     { name: 'Conference Room 3', employees: 20, img: 'img4.jpg' },
-    { name: 'Conference Room 4', employees: 8, img: 'image.jpg' },
+    { name: 'Conference Room 4', employees: 8, img: 'image.jpg' },  
     { name: 'Conference Room 5', employees: 16, img: 'img4.jpg' },
     { name: 'Conference Room 6', employees: 20, img: 'image.jpg' },
     { name: 'Conference Room 7', employees: 8, img: 'Img (1).png' },
