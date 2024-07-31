@@ -1,45 +1,51 @@
-import React, { useState } from 'react';
+
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Container, Form, Button, Row, Col, Card } from 'react-bootstrap';
-import '../App.css';
+import './BookRoom.css';
+import { setLocation, setDate, setEmployees, setFilteredRooms, setSearchClicked } from './BookroomSlice';
 
 const Bookroom = () => {
-  const [selectedEmployees, setSelectedEmployees] = useState(null);
-  const [filteredRooms, setFilteredRooms] = useState([]);
-  const [searchClicked, setSearchClicked] = useState(false);
+  const dispatch = useDispatch();
+  const { location, date, employees, filteredRooms, searchClicked } = useSelector((state) => state.bookroom);
 
   const rooms = [
     { name: 'Conference Room 1', employees: 8, img: 'Img (1).png' },
-    { name: 'Conference Room 2', employees: 16, img: 'Img.png' },
-    { name: 'Conference Room 3', employees: 20, img: 'image.jpg' },
-    { name: 'Conference Room 4', employees: 8, img: 'img4.jpg' },
-    { name: 'Conference Room 5', employees: 16, img: 'Img (1).png' }, 
-    { name: 'Conference Room 6', employees: 20, img: 'Img.png' },
-    { name: 'Conference Room 7', employees: 8, img: 'Img (2).png' },
+    { name: 'Conference Room 2', employees: 16, img: 'Img.png'},
+    { name: 'Conference Room 3', employees: 20, img: 'img4.jpg' },
+    { name: 'Conference Room 4', employees: 8, img: 'image.jpg' },
+    { name: 'Conference Room 5', employees: 16, img: 'img4.jpg' },
+    { name: 'Conference Room 6', employees: 20, img: 'image.jpg' },
+    { name: 'Conference Room 7', employees: 8, img: 'Img (1).png' },
     { name: 'Conference Room 8', employees: 16, img: 'img4.jpg' },
   ];
 
   const handleEmployeeChange = (e) => {
-    setSelectedEmployees(parseInt(e.target.value));
+    dispatch(setEmployees(parseInt(e.target.value)));
   };
 
   const handleSearchClick = () => {
-    setSearchClicked(true);
-    const filtered = selectedEmployees
-      ? rooms.filter(room => room.employees === selectedEmployees)
+    dispatch(setSearchClicked(true));
+    const filtered = employees
+      ? rooms.filter(room => room.employees === employees)
       : [];
-    setFilteredRooms(filtered);
+    dispatch(setFilteredRooms(filtered));
   };
 
   return (
-    <Container className="bookroom-container">
-      <h1>Book a Room</h1>
+    <Container className="bookroom-container roo">
+      <h1 >Book a Room</h1>
       <p className="light-text">Book a conference room at any Kanini location</p>
       <Form>
         <Row className="mb-3 align-items-end">
           <Col md={3}>
             <Form.Group controlId="formLocation">
               <Form.Label>Location</Form.Label>
-              <Form.Control as="select">
+              <Form.Control
+                as="select"
+                value={location}
+                onChange={(e) => dispatch(setLocation(e.target.value))}
+              >
                 <option>Futura, Pune</option>
                 <option>Kanini, Bangalore</option>
                 <option>Kanini, Chennai</option>
@@ -49,7 +55,11 @@ const Bookroom = () => {
           <Col md={3}>
             <Form.Group controlId="formDate">
               <Form.Label>Date</Form.Label>
-              <Form.Control type="date" />
+              <Form.Control
+                type="date"
+                value={date}
+                onChange={(e) => dispatch(setDate(e.target.value))}
+              />
             </Form.Group>
           </Col>
           <Col md={3}>

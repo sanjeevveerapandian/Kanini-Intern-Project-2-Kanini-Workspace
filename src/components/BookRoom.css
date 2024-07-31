@@ -1,15 +1,14 @@
 .bookroom-container {
   margin-top: 20px;
 }
-
 .light-text {
   color: grey;
 }
 
 .bookroom-container .form-control {
   margin-bottom: 10px;
+  
 }
-
 .search-button {
   width: 100%;
 }
@@ -33,4 +32,8 @@
 .card img {
   height: 150px;
   object-fit: cover;
+}
+.roo{
+  position: relative;
+  right: 7%;
 }

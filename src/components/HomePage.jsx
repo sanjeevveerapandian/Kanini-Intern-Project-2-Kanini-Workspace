@@ -1,67 +1,3 @@
-// import React from "react";
-// import { Link } from "react-router-dom";
-// import "./HomePage.css";
-// import { Navbar, Nav, Container, Image, NavDropdown } from 'react-bootstrap';
-
-// const HomePage = () => {
-//   return (
-//     <>
-//       <header className="banner-container">
-//         <img src="banner.png" alt="Banner" className="banner-image" />
-//         <div className="welcome-card">
-//           <p>Hello Tamilselvan, Welcome to</p>
-//           <NavDropdown title="Rattha Tek Meadows,Chennai" id="basic-nav-dropdown" className="location-dropdown">
-//                 <NavDropdown.Item >kanini-bangalore</NavDropdown.Item>
-//                 <NavDropdown.Item >kanini-coimbatore</NavDropdown.Item>
-//               </NavDropdown>
-//         </div>
-//       </header>
-//       <main className="container">
-//         <div className="row">
-//           <tr className="col-md-12">
-//         <td className="col-md-7">
-//           <section className="upcoming-card ">
-//             <h2>
-//               <img className="tick-image" src="tick-mark 1.png" alt="Tick Mark" />
-//               Nothing Upcoming!
-//             </h2>
-//             <p style={{color:"grey"}}>Any upcoming bookings and guests will appear here</p>
-//             <Link to="/bookroom" className="mx-2 text-decoration-none " style={{fontWeight:"500" , color:"#5162F6"}}>
-//               <img src="door.png" alt="Book a Room" />
-//               Book a Room  &rarr;
-//             </Link>
-//             <Link to="/bookdesk" className="mx-2 text-decoration-none" style={{fontWeight:"500",color:"#5162F6"}}>
-//               <img src="deskchair.png" alt="Book a Desk" />
-//               Book a Desk &rarr;
-//             </Link>
-//           </section>
-//           </td>
-//           <td className="col-md-5">
-//           <section className="events-card  ">
-//             <h3>Events happening at Chennai today</h3>
-//             <p style={{color:"grey"}}><b>July 13</b> Family Day in Chennai Faculty<br />10am-6pm</p>
-//             <button style={{backgroundColor:"white" ,color:"#5162f6"}}>view Details</button>
-//             <hr />
-//             <p style={{color:"grey"}}><b>July 13</b>  Family Day in Chennai Faculty<br />10am-6pm</p>
-//             <button style={{backgroundColor:"white" ,color:"#5162f6"}}>view Details</button>
-//           </section>
-//           <section className="events-card1  ">
-//             <h3>Notifications</h3>
-//             <p style={{color:"grey"}}><img src="Ellipse.png"></img> Added capacity in Kanini, Pune office<br />Hr Admin</p>
-//             <button style={{backgroundColor:"white" ,color:"#5162f6"}}>view Details</button>
-//             <hr />
-//           </section>
-//           </td>
-//           </tr>
-//           </div>
-          
-          
-//       </main>
-//     </>
-//   );
-// };
-
-// export default HomePage;
 
 import React from "react";
 import { Link } from "react-router-dom";
@@ -146,7 +82,7 @@ const HomePage = () => {
             <section className="events-card">
               <h3>Events happening at Chennai today</h3>
               <p style={{color:"grey"}}><b>July 13</b> Family Day in Chennai Faculty<br />10am-6pm</p>
-              <button style={{backgroundColor:"white" ,color:"#5162f6"}}>view Details</button>
+              <button className="button">view Details</button>
               <hr />
               <p style={{color:"grey"}}><b>July 13</b>  Family Day in Chennai Faculty<br />10am-6pm</p>
               <button style={{backgroundColor:"white" ,color:"#5162f6"}}>view Details</button>

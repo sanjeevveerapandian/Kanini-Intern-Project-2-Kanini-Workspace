@@ -41,3 +41,11 @@
   border-radius: 12px 0px 0px 0px;
   opacity: 1; /* Set to 1 to make it visible */
 }
+.ds{
+  position: relative;
+  right: 7%;
+}
+.img{
+  position: relative;
+  left: 50%;
+}
